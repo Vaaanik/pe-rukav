@@ -1,0 +1,999 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Виробництво поліетиленового рукава до 500 мм, полотна до 1000 мм, пакетів зі швом і дном та друку логотипа. Кривий Ріг. Цілі рулони та продукція на замовлення.">
+<meta name="keywords" content="поліетиленовий рукав, плівка поліетиленова, рукав ПЕ, пакети з логотипом, полиэтиленовый рукав, Кривий Ріг">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ПЕ Рукав Кривий Ріг">
+<meta property="og:description" content="Рукав, полотно і пакети з поліетилену власного виробництва. Друк логотипа. Рулони та замовлення.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230A6F94'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23fff'/%3E%3C/svg%3E">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>ПЕ Рукав Кривий Ріг</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Onest:wght@400;500;600&family=Unbounded:wght@500;700&display=swap&subset=cyrillic,latin">
+<style>
+/* Layout: промышленный каталог. Слева текст и действия, справа чертёж: рулон, рукав, полотно до 1000 мм. Дальше секции с чёткой сеткой. */
+:root {
+  --bg: #EDF1F3;
+  --surface: #F8FAFB;
+  --ink: #12222B;
+  --muted: #4F6470;
+  --line: #C6D3DA;
+  --accent: #0A6F94;
+  --accent-ink: #FFFFFF;
+  --film: #D3E5EE;
+  --note: #E4EEF3;
+  --font-display: "Unbounded", "Onest", system-ui, sans-serif;
+  --font-body: "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0D161B; --surface: #142027; --ink: #E6EEF2; --muted: #93A8B3;
+    --line: #29404B; --accent: #4FB6DC; --accent-ink: #06161D; --film: #1B3440; --note: #182A33;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0D161B; --surface: #142027; --ink: #E6EEF2; --muted: #93A8B3;
+  --line: #29404B; --accent: #4FB6DC; --accent-ink: #06161D; --film: #1B3440; --note: #182A33;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--ink);
+  font: 16px/1.55 var(--font-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+  margin: 0;
+}
+.wrap { max-width: 1120px; margin: 0 auto; }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+h1 { font: 700 clamp(26px, 5vw, 48px)/1.1 var(--font-display); letter-spacing: -0.02em; }
+h2 { font: 700 clamp(22px, 3.4vw, 32px)/1.15 var(--font-display); letter-spacing: -0.01em; }
+h3 { font: 600 17px/1.3 var(--font-body); }
+p { margin: 0; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.label { font: 500 12px/1.3 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+/* header */
+.top { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; padding-block: 16px; border-bottom: 1px solid var(--line); }
+.brand { font: 700 15px/1 var(--font-display); letter-spacing: 0.02em; }
+.brand span { color: var(--accent); }
+.nav { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 14px; align-items: center; }
+.nav a { color: var(--muted); text-decoration: none; }
+.nav a:hover { color: var(--ink); }
+.lang { display: flex; gap: 4px; }
+.lang button { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: 500 12px/1 var(--font-mono); padding: 8px 10px; border-radius: 6px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: center; padding-block: 44px 36px; }
+.hero p.lead { margin-top: 18px; max-width: 54ch; color: var(--muted); font-size: 17.5px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.btn { appearance: none; border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink); font: 600 15px/1 var(--font-body); padding: 14px 20px; border-radius: 6px; cursor: pointer; text-decoration: none; display: inline-block; }
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn:hover { filter: brightness(1.08); }
+.hero-facts { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); }
+.fact b { display: block; font: 500 21px/1.2 var(--font-mono); }
+.fact span { font-size: 13px; color: var(--muted); }
+.draw { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin: 0; }
+.draw svg { width: 100%; height: auto; display: block; }
+.draw figcaption { margin-top: 8px; font-size: 12.5px; color: var(--muted); }
+
+/* sections */
+section { padding-block: 40px; border-top: 1px solid var(--line); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 26px; max-width: 64ch; }
+.sec-head p { color: var(--muted); }
+
+.formats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.fmt { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 22px; display: grid; gap: 12px; align-content: start; }
+.fmt ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; color: var(--muted); }
+.fmt .label { color: var(--accent); }
+.fmt.alt { background: var(--film); border-color: transparent; }
+
+/* catalog */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.chip { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: 500 14px/1 var(--font-body); padding: 10px 14px; border-radius: 999px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.filters.sub { margin-bottom: 8px; }
+.filters.last { margin-bottom: 22px; }
+.filters .gap-label { align-self: center; margin-right: 4px; min-width: 64px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 14px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.photo { aspect-ratio: 4 / 3; max-width: 100%; background: var(--film); display: grid; place-items: center; }
+.photo svg, .photo img { width: 100%; height: 100%; display: block; }
+.photo img { object-fit: cover; }
+.card .body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.card .tag { font: 500 11px/1 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 8px; border-radius: 4px; background: var(--film); color: var(--ink); }
+.card .tag.custom { background: var(--accent); color: var(--accent-ink); }
+.card p { color: var(--muted); font-size: 14.5px; flex: 1; }
+.spec { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: 13px; padding-top: 10px; border-top: 1px dashed var(--line); margin: 0; }
+.spec dt { color: var(--muted); }
+.spec dd { margin: 0; font-family: var(--font-mono); text-align: right; }
+.card .btn { padding: 11px 14px; font-size: 14px; text-align: center; }
+.empty { color: var(--muted); padding: 20px 0; }
+
+/* calculator */
+.calc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 22px; }
+.field { display: grid; gap: 6px; margin-bottom: 16px; align-content: start; }
+.field:last-child { margin-bottom: 0; }
+label { font-size: 14px; font-weight: 500; }
+input[type="number"], input[type="text"], input[type="tel"], select, textarea {
+  width: 100%; font: 400 16px/1.3 var(--font-body); color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 6px; padding: 12px;
+}
+textarea { min-height: 88px; resize: vertical; }
+.hint { font-size: 12.5px; color: var(--muted); }
+.results { display: grid; }
+.res { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.res:last-of-type { border-bottom: 0; }
+.res span { color: var(--muted); font-size: 14px; }
+.res b { font: 500 20px/1.2 var(--font-mono); text-align: right; }
+.res.main b { color: var(--accent); font-size: 26px; }
+
+/* limits */
+.limits { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.limits ul { margin: 12px 0 0; padding-left: 18px; display: grid; gap: 8px; }
+.limits .no { background: var(--note); }
+.limits .panel p { color: var(--muted); font-size: 14.5px; margin-top: 12px; }
+
+/* steps */
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.step { border-top: 3px solid var(--accent); padding-top: 14px; display: grid; gap: 6px; align-content: start; }
+.step p { color: var(--muted); font-size: 14.5px; }
+
+/* form */
+.form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; }
+.form .full { grid-column: 1 / -1; }
+.out { margin-top: 18px; display: grid; gap: 10px; }
+.out pre { margin: 0; white-space: pre-wrap; word-break: break-word; font: 400 14px/1.5 var(--font-mono); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 14px; }
+.contacts { display: grid; gap: 14px; align-content: start; }
+.contacts .row { display: grid; gap: 4px; }
+.contacts .row b { font: 500 18px/1.3 var(--font-mono); word-break: break-word; }
+.msgr { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.msgr a { font: 500 13px/1 var(--font-body); padding: 9px 12px; border: 1px solid var(--line); border-radius: 6px; text-decoration: none; color: var(--accent); background: var(--bg); }
+.sendbox { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr); gap: 20px; }
+footer { padding-top: 28px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+
+@media (max-width: 820px) {
+  .hero, .formats, .calc, .limits, .steps, .sendbox, .form { grid-template-columns: minmax(0, 1fr); }
+  .hero { padding-block: 28px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand" id="brand"></div>
+    <nav class="nav" aria-label="Menu">
+      <a href="#formats" data-i18n="nav_formats"></a>
+      <a href="#catalog" data-i18n="nav_catalog"></a>
+      <a href="#calc" data-i18n="nav_calc"></a>
+      <a href="#limits" data-i18n="nav_limits"></a>
+      <a href="#order" data-i18n="nav_order"></a>
+      <div class="lang" id="lang" role="group" aria-label="Language"></div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <p class="label" data-i18n="hero_label"></p>
+      <h1 style="margin-top:14px" data-i18n="hero_h1"></h1>
+      <p class="lead" data-i18n="hero_lead"></p>
+      <div class="cta-row">
+        <a class="btn" href="#order" data-i18n="cta1"></a>
+        <a class="btn ghost" href="#catalog" data-i18n="cta2"></a>
+      </div>
+      <div class="hero-facts">
+        <div class="fact"><b data-i18n="f1b"></b><span data-i18n="f1s"></span></div>
+        <div class="fact"><b data-i18n="f2b"></b><span data-i18n="f2s"></span></div>
+        <div class="fact"><b data-i18n="f3b"></b><span data-i18n="f3s"></span></div>
+      </div>
+    </div>
+    <figure class="draw">
+      <svg viewBox="0 0 460 290" role="img" data-i18n-aria="svg_aria">
+        <!-- 1. рулон, вид с торца -->
+        <g fill="none" stroke="var(--muted)" stroke-width="1.2">
+          <circle cx="60" cy="110" r="50" fill="var(--film)" stroke="var(--ink)" stroke-width="1.6"/>
+          <circle cx="60" cy="110" r="38"/>
+          <circle cx="60" cy="110" r="27"/>
+          <circle cx="60" cy="110" r="16" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.6"/>
+        </g>
+        <text x="60" y="190" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--muted)" data-i18n="s_roll"></text>
+        <!-- 2. рукав в сложенном виде 500 мм -->
+        <rect x="140" y="60" width="90" height="100" fill="var(--film)" stroke="var(--ink)" stroke-width="1.6"/>
+        <line x1="140" y1="110" x2="230" y2="110" stroke="var(--muted)" stroke-width="1" stroke-dasharray="5 4"/>
+        <g stroke="var(--accent)" stroke-width="1.4">
+          <line x1="140" y1="44" x2="230" y2="44"/>
+          <line x1="140" y1="38" x2="140" y2="50"/>
+          <line x1="230" y1="38" x2="230" y2="50"/>
+        </g>
+        <text x="185" y="32" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--accent)" data-i18n="s_500"></text>
+        <text x="185" y="190" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--muted)" data-i18n="s_sleeve"></text>
+        <!-- разрез -->
+        <g stroke="var(--accent)" stroke-width="1.6" fill="var(--accent)">
+          <line x1="244" y1="110" x2="268" y2="110"/>
+          <path d="M268 104 L278 110 L268 116 Z"/>
+        </g>
+        <text x="260" y="134" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--accent)" data-i18n="s_cut"></text>
+        <!-- 3. полотно после разреза 1000 мм -->
+        <rect x="288" y="60" width="160" height="100" fill="var(--film)" stroke="var(--ink)" stroke-width="1.6"/>
+        <g stroke="var(--accent)" stroke-width="1.4">
+          <line x1="288" y1="44" x2="448" y2="44"/>
+          <line x1="288" y1="38" x2="288" y2="50"/>
+          <line x1="448" y1="38" x2="448" y2="50"/>
+        </g>
+        <text x="368" y="32" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--accent)" data-i18n="s_1000"></text>
+        <text x="368" y="190" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--muted)" data-i18n="s_flat"></text>
+        <!-- толщина -->
+        <text x="230" y="238" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--accent)" data-i18n="s_thick"></text>
+        <line x1="90" y1="256" x2="370" y2="256" stroke="var(--line)" stroke-width="1"/>
+      </svg>
+      <figcaption data-i18n="cap"></figcaption>
+    </figure>
+  </div>
+
+  <section id="formats">
+    <div class="sec-head">
+      <p class="label" data-i18n="fmt_label"></p>
+      <h2 data-i18n="fmt_h2"></h2>
+      <p data-i18n="fmt_p"></p>
+    </div>
+    <div class="formats">
+      <div class="fmt">
+        <p class="label" data-i18n="fmt1_l"></p>
+        <h3 data-i18n="fmt1_h"></h3>
+        <ul><li data-i18n="fmt1_a"></li><li data-i18n="fmt1_b"></li><li data-i18n="fmt1_c"></li></ul>
+      </div>
+      <div class="fmt alt">
+        <p class="label" data-i18n="fmt2_l"></p>
+        <h3 data-i18n="fmt2_h"></h3>
+        <ul><li data-i18n="fmt2_a"></li><li data-i18n="fmt2_b"></li><li data-i18n="fmt2_c"></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog">
+    <div class="sec-head">
+      <p class="label" data-i18n="cat_label"></p>
+      <h2 data-i18n="cat_h2"></h2>
+      <p data-i18n="cat_p"></p>
+    </div>
+    <div class="filters sub" id="catFilters" role="group"></div>
+    <div class="filters sub" id="typeFilters" role="group"></div>
+    <div class="filters last" id="modeFilters" role="group"></div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+  </section>
+
+  <section id="calc">
+    <div class="sec-head">
+      <p class="label" data-i18n="calc_label"></p>
+      <h2 data-i18n="calc_h2"></h2>
+      <p data-i18n="calc_p"></p>
+    </div>
+    <div class="calc">
+      <div class="panel">
+        <div class="field">
+          <label for="cMode" data-i18n="c_mode"></label>
+          <select id="cMode">
+            <option value="sleeve" data-i18n="c_mode_s"></option>
+            <option value="flat" data-i18n="c_mode_f"></option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cW" data-i18n="c_w"></label>
+          <input type="number" id="cW" value="500" min="50" max="500" step="10" inputmode="numeric">
+          <span class="hint" id="cWHint"></span>
+        </div>
+        <div class="field">
+          <label for="cT" data-i18n="c_t"></label>
+          <input type="number" id="cT" value="100" min="30" max="500" step="10" inputmode="numeric">
+          <span class="hint" data-i18n="c_t_h"></span>
+        </div>
+        <div class="field">
+          <label for="cL" data-i18n="c_l"></label>
+          <input type="number" id="cL" value="100" min="1" max="5000" step="10" inputmode="numeric">
+        </div>
+      </div>
+      <div class="panel">
+        <div class="results">
+          <div class="res main"><span data-i18n="r_m"></span><b id="rM"></b></div>
+          <div class="res"><span data-i18n="r_m1"></span><b id="rM1"></b></div>
+          <div class="res"><span data-i18n="r_flat"></span><b id="rFlat"></b></div>
+          <div class="res"><span data-i18n="r_area"></span><b id="rArea"></b></div>
+        </div>
+        <p class="hint" style="margin-top:14px" data-i18n="c_note"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="limits">
+    <div class="sec-head">
+      <p class="label" data-i18n="lim_label"></p>
+      <h2 data-i18n="lim_h2"></h2>
+      <p data-i18n="lim_p"></p>
+    </div>
+    <div class="limits">
+      <div class="panel">
+        <h3 data-i18n="lim_yes"></h3>
+        <ul>
+          <li data-i18n="y1"></li><li data-i18n="y2"></li><li data-i18n="y3"></li>
+          <li data-i18n="y4"></li><li data-i18n="y5"></li><li data-i18n="y6"></li>
+        </ul>
+      </div>
+      <div class="panel no">
+        <h3 data-i18n="lim_no"></h3>
+        <ul>
+          <li data-i18n="n1"></li><li data-i18n="n2"></li><li data-i18n="n3"></li>
+        </ul>
+        <p data-i18n="lim_note"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="sec-head">
+      <p class="label" data-i18n="how_label"></p>
+      <h2 data-i18n="how_h2"></h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3 data-i18n="st1h"></h3><p data-i18n="st1p"></p></div>
+      <div class="step"><h3 data-i18n="st2h"></h3><p data-i18n="st2p"></p></div>
+      <div class="step"><h3 data-i18n="st3h"></h3><p data-i18n="st3p"></p></div>
+    </div>
+  </section>
+
+  <section id="order">
+    <div class="sec-head">
+      <p class="label" data-i18n="ord_label"></p>
+      <h2 data-i18n="ord_h2"></h2>
+      <p data-i18n="ord_p"></p>
+    </div>
+    <div class="sendbox">
+      <form class="panel form" id="orderForm" novalidate>
+        <div class="field">
+          <label for="fName" data-i18n="f_name"></label>
+          <input type="text" id="fName" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="fPhone" data-i18n="f_phone"></label>
+          <input type="tel" id="fPhone" autocomplete="tel" inputmode="tel">
+        </div>
+        <div class="field">
+          <label for="fCat" data-i18n="f_cat"></label>
+          <select id="fCat"></select>
+        </div>
+        <div class="field">
+          <label for="fType" data-i18n="f_type"></label>
+          <select id="fType"></select>
+        </div>
+        <div class="field">
+          <label for="fMode" data-i18n="f_mode"></label>
+          <select id="fMode"></select>
+        </div>
+        <div class="field">
+          <label for="fQ" data-i18n="f_q"></label>
+          <input type="text" id="fQ" data-i18n-ph="f_q_ph">
+        </div>
+        <div class="field">
+          <label for="fW" data-i18n="f_w"></label>
+          <input type="number" id="fW" min="1" max="1000" inputmode="numeric" data-i18n-ph="f_w_ph">
+        </div>
+        <div class="field">
+          <label for="fT" data-i18n="f_t"></label>
+          <input type="number" id="fT" min="1" max="500" inputmode="numeric" data-i18n-ph="f_t_ph">
+        </div>
+        <div class="field">
+          <label for="fColor" data-i18n="f_color"></label>
+          <input type="text" id="fColor" data-i18n-ph="f_color_ph">
+        </div>
+        <div class="field">
+          <label for="fPrint" data-i18n="f_print"></label>
+          <input type="text" id="fPrint" data-i18n-ph="f_print_ph">
+        </div>
+        <div class="field full">
+          <label for="fMsg" data-i18n="f_msg"></label>
+          <textarea id="fMsg" data-i18n-ph="f_msg_ph"></textarea>
+        </div>
+        <input type="checkbox" name="botcheck" id="fBot" tabindex="-1" autocomplete="off" style="display:none">
+        <div class="full"><button class="btn" type="submit" id="fSubmit"></button> <p class="hint" id="sendNote" role="status" style="margin-top:10px"></p></div>
+        <div class="out full" id="out" hidden>
+          <pre id="outText"></pre>
+          <div><button class="btn ghost" type="button" id="copyBtn" data-i18n="f_copy"></button> <span class="hint" id="copyNote" role="status"></span></div>
+        </div>
+      </form>
+      <div class="panel contacts">
+        <p class="label" data-i18n="ct_label"></p>
+        <div class="row"><span class="hint" data-i18n="ct_person"></span><b id="cPerson" style="font-family:var(--font-body);font-weight:600"></b></div>
+        <div class="row"><span class="hint" data-i18n="ct_phone"></span><b id="cPhone"></b></div>
+        <div class="row"><span class="hint" data-i18n="ct_mail"></span><b id="cMail"></b></div>
+        <div class="row"><span class="hint" data-i18n="ct_msg"></span><b id="cMsg" style="font-family:var(--font-body);font-weight:500;font-size:16px"></b>
+          <div class="msgr" id="msgr"></div></div>
+        <div class="row"><span class="hint" data-i18n="ct_prod"></span><b style="font-family:var(--font-body);font-weight:500;font-size:16px" data-i18n="ct_addr"></b></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span data-i18n="foot1"></span>
+    <span data-i18n="foot2"></span>
+  </footer>
+</div>
+
+<script>
+/* Контакты: замените значения на свои, они подставятся на страницу. */
+var CONFIG = {
+  person: { uk: "Іван Малихін", ru: "Иван Малыхин", en: "Ivan Malykhin" },
+  phone: "+380 95 590 88 08",
+  phoneRaw: "380955908808",
+  mail: "v2394454@gmail.com",
+  messenger: "Telegram · WhatsApp · Viber",
+  /* Ключ Web3Forms (web3forms.com): заявки приходят на почту, к которой он привязан. Пусто = только копирование текста. */
+  web3formsKey: ""
+};
+
+/* Фотографии продукции. Ключ: id позиции из каталога (ITEMS), значение: data:image/jpeg;base64,...
+   Пока фото нет, в карточке показан чертёж-пиктограмма. */
+var IMAGES = {};
+
+var LANGS = ["uk", "ru", "en"];
+var LANG_LABEL = { uk: "UA", ru: "RU", en: "EN" };
+var LOCALE = { uk: "uk-UA", ru: "ru-RU", en: "en-US" };
+
+var T = {
+  uk: {
+    brand: "ПЕ·РУКАВ", doc_title: "ПЕ Рукав Кривий Ріг",
+    nav_formats: "Формати", nav_catalog: "Каталог", nav_calc: "Розрахунок маси", nav_limits: "Можливості", nav_order: "Заявка",
+    hero_label: "Поліетиленова продукція · Кривий Ріг",
+    hero_h1: "Рукав, полотно і пакети з поліетилену власного виробництва",
+    hero_lead: "Виготовляємо рукав на власній екструзії, розрізаємо його на полотно до 1000 мм, зварюємо пакети та наносимо друк. Продаємо цілими рулонами або робимо під ваше замовлення.",
+    cta1: "Залишити заявку", cta2: "Дивитися каталог",
+    f1b: "до 500 мм", f1s: "ширина рукава в складеному вигляді",
+    f2b: "до 1000 мм", f2s: "ширина полотна після розрізу",
+    f3b: "до 500 мкм", f3s: "товщина плівки",
+    svg_aria: "Схема: рулон, рукав шириною до 500 мм у складеному вигляді і полотно шириною до 1000 мм після розрізу",
+    s_roll: "рулон, вигляд з торця", s_sleeve: "рукав складений", s_flat: "полотно після розрізу",
+    s_cut: "розріз", s_500: "до 500 мм", s_1000: "до 1000 мм", s_thick: "товщина плівки до 500 мкм",
+    cap: "Рукав розрізають уздовж, і виходить суцільне полотно шириною до 1000 мм.",
+    fmt_label: "Два способи замовити", fmt_h2: "Цілий рулон або окрема позиція на замовлення",
+    fmt_p: "Оберіть те, що простіше для вашої задачі. Якщо сумніваєтесь, опишіть, що потрібно, і ми запропонуємо розмір.",
+    fmt1_l: "Цілий рулон", fmt1_h: "Стандартні розміри, поставка рулонами",
+    fmt1_a: "Типові ширина і товщина, без узгодження технології.",
+    fmt1_b: "Підходить для регулярних закупівель і перепродажу.",
+    fmt1_c: "Наявність і строк відвантаження підтверджуємо під час заявки.",
+    fmt2_l: "На замовлення", fmt2_h: "Ваші параметри: ширина, товщина, пакети, друк",
+    fmt2_a: "Будь-які ширина і товщина в межах можливостей екструзії.",
+    fmt2_b: "Пакети зі швом і запаяним дном, друк логотипа та малюнка.",
+    fmt2_c: "Повторні замовлення робимо за тими самими параметрами.",
+    cat_label: "Каталог", cat_h2: "Що беруть найчастіше",
+    cat_p: "Товщини в картках дані як орієнтир для типових задач. Точний розмір підберемо під ваше застосування.",
+    flt_cat: "Категорія", flt_type: "Вид", flt_mode: "Формат",
+    all_cats: "Усі категорії", all_types: "Усі види", any_mode: "Будь-який",
+    mode_roll: "Цілий рулон", mode_custom: "На замовлення",
+    c_build: "Будівництво і ремонт", c_pack: "Пакування і склад", c_industry: "Виробництво і метал", c_garden: "Дім і город", c_wholesale: "Опт і перепродаж",
+    t_sleeve: "Рукав", t_flat: "Полотно", t_bag: "Пакети", t_print: "З друком",
+    spec_w: "Ширина", spec_t: "Товщина", request: "Запросити", by_order: "за замовленням",
+    empty: "У цій комбінації поки немає позицій. Оберіть інший фільтр або опишіть задачу в заявці.",
+    mm: "мм", um: "мкм", up_to: "до",
+    calc_label: "Розрахунок", calc_h2: "Маса рулона і площа полотна",
+    calc_p: "Введіть розміри, і отримаєте масу рулона. Зручно, щоб заздалегідь прикинути перевезення та бюджет.",
+    c_mode: "Що ви вказуєте", c_mode_s: "Ширина рукава в складеному вигляді", c_mode_f: "Ширина полотна після розрізу",
+    c_w: "Ширина, мм", c_w_h_s: "Рукав: від 50 до 500 мм.", c_w_h_f: "Полотно: від 100 до 1000 мм.",
+    c_t: "Товщина плівки, мкм", c_t_h: "До 500 мкм. Мінімальну товщину уточнюйте.",
+    c_l: "Довжина в рулоні, м",
+    r_m: "Маса рулона", r_m1: "Маса 1 погонного метра", r_flat: "Ширина полотна", r_area: "Площа полотна в рулоні",
+    u_kg: "кг", u_g: "г", u_mm: "мм", u_m2: "м²",
+    c_note: "Розрахунок для поліетилену густиною близько 0,92 г/см³. Фактична маса може відрізнятися на кілька відсотків.",
+    lim_label: "Можливості", lim_h2: "Що ми робимо і де межі",
+    lim_p: "Краще дізнатися про це до заявки. Якщо потрібного немає в списку, напишіть: можливо, знайдемо рішення.",
+    lim_yes: "Робимо", lim_no: "Не робимо",
+    y1: "Рукав шириною до 500 мм у складеному вигляді.", y2: "Полотно після розрізу рукава шириною до 1000 мм.",
+    y3: "Товщина плівки до 500 мкм.", y4: "Пакети зі зварним швом і запаяним дном.",
+    y5: "Друк логотипа і малюнка на плівці та пакетах.", y6: "Намотування на рулони, довжину узгоджуємо.",
+    n1: "Рукав шириною понад 500 мм у складеному вигляді.", n2: "Полотно ширше за 1000 мм.", n3: "Плівка товще за 500 мкм.",
+    lim_note: "Розміри пакетів, кількість кольорів друку та мінімальну партію уточнюйте під час заявки. Макет надсилайте у векторі або у високій якості.",
+    how_label: "Як ми працюємо", how_h2: "Від заявки до відвантаження",
+    st1h: "Ви надсилаєте розміри", st1p: "Ширина, товщина, довжина і для чого потрібна плівка. Для пакетів і друку додайте макет. Якщо не знаєте параметрів, опишіть задачу.",
+    st2h: "Ми підтверджуємо і рахуємо", st2p: "Повідомляємо, чи можливо це на нашому обладнанні, називаємо ціну та строк.",
+    st3h: "Виготовляємо і відвантажуємо", st3p: "Робимо партію, намотуємо рулони, пакуємо та передаємо вам. Повтор замовлення робимо за тими самими параметрами.",
+    ord_label: "Заявка", ord_h2: "Опишіть, що потрібно",
+    ord_p: "Заповніть форму, і ми отримаємо заявку. Відповімо з ціною та строком.",
+    f_name: "Ім’я", f_phone: "Телефон", f_cat: "Для чого потрібна продукція", f_type: "Що потрібно", f_mode: "Формат",
+    f_q: "Кількість (рулонів, метрів або штук)", f_q_ph: "наприклад, 5 рулонів по 100 м",
+    f_w: "Ширина, мм (рукав або полотно)", f_w_ph: "рукав до 500, полотно до 1000",
+    f_t: "Товщина, мкм", f_t_ph: "до 500",
+    f_color: "Колір плівки", f_color_ph: "прозорий, чорний або інший",
+    f_print: "Друк (для пакетів і плівки)", f_print_ph: "кількість кольорів, є макет чи ні",
+    f_msg: "Коментар", f_msg_ph: "Де будете застосовувати, розмір пакета, строк",
+    f_submit: "Надіслати заявку", f_submit_copy: "Скласти текст заявки", sending: "Надсилаємо…", sent_ok: "Заявку надіслано. Ми зв’яжемося з вами найближчим часом.", sent_fail: "Не вдалося надіслати. Скопіюйте текст нижче і надішліть нам у месенджер або на пошту.", need_phone: "Вкажіть телефон, щоб ми могли з вами зв’язатися.", f_copy: "Скопіювати текст", copied: "Скопійовано.", copy_fb: "Текст виділено: скопіюйте вручну.",
+    mode_unknown: "Поки не знаю", other: "Інше",
+    o_title: "Заявка на поліетиленову продукцію", o_name: "Ім’я", o_phone: "Телефон", o_use: "Застосування", o_type: "Що потрібно", o_mode: "Формат",
+    o_w: "Ширина", o_t: "Товщина", o_q: "Кількість", o_color: "Колір", o_print: "Друк", o_msg: "Коментар",
+    warn_w: "(увага: рукав до 500 мм, полотно до 1000 мм)", warn_t: "(увага: межа 500 мкм)",
+    ct_label: "Контакти", ct_person: "Контактна особа", ct_phone: "Телефон", ct_mail: "Пошта", ct_msg: "Месенджер", ct_prod: "Виробництво", ct_addr: "Кривий Ріг, Дніпропетровська область",
+    foot1: "ПЕ Рукав · виробництво поліетиленової продукції", foot2: "Розміри і строки підтверджуються під час заявки"
+  },
+  ru: {
+    brand: "ПЭ·РУКАВ", doc_title: "ПЭ Рукав Кривой Рог",
+    nav_formats: "Форматы", nav_catalog: "Каталог", nav_calc: "Расчёт массы", nav_limits: "Возможности", nav_order: "Заявка",
+    hero_label: "Полиэтиленовая продукция · Кривой Рог",
+    hero_h1: "Рукав, полотно и пакеты из полиэтилена собственного производства",
+    hero_lead: "Производим рукав на собственной экструзии, разрезаем его на полотно до 1000 мм, свариваем пакеты и наносим печать. Продаём целыми рулонами или делаем под ваш заказ.",
+    cta1: "Оставить заявку", cta2: "Смотреть каталог",
+    f1b: "до 500 мм", f1s: "ширина рукава в сложенном виде",
+    f2b: "до 1000 мм", f2s: "ширина полотна после разреза",
+    f3b: "до 500 мкм", f3s: "толщина плёнки",
+    svg_aria: "Схема: рулон, рукав шириной до 500 мм в сложенном виде и полотно шириной до 1000 мм после разреза",
+    s_roll: "рулон, вид с торца", s_sleeve: "рукав сложенный", s_flat: "полотно после разреза",
+    s_cut: "разрез", s_500: "до 500 мм", s_1000: "до 1000 мм", s_thick: "толщина плёнки до 500 мкм",
+    cap: "Рукав разрезают вдоль, и получается сплошное полотно шириной до 1000 мм.",
+    fmt_label: "Два способа заказать", fmt_h2: "Целый рулон или отдельная позиция под заказ",
+    fmt_p: "Выберите то, что проще для вашей задачи. Если сомневаетесь, опишите, что нужно, и мы предложим размер.",
+    fmt1_l: "Целый рулон", fmt1_h: "Стандартные размеры, поставка рулонами",
+    fmt1_a: "Типовые ширина и толщина, без согласования технологии.",
+    fmt1_b: "Подходит для регулярных закупок и перепродажи.",
+    fmt1_c: "Наличие и срок отгрузки подтверждаем при заявке.",
+    fmt2_l: "Под заказ", fmt2_h: "Ваши параметры: ширина, толщина, пакеты, печать",
+    fmt2_a: "Любая ширина и толщина в пределах возможностей экструзии.",
+    fmt2_b: "Пакеты со швом и запаянным дном, печать логотипа и рисунка.",
+    fmt2_c: "Повторные заказы делаем по тем же параметрам.",
+    cat_label: "Каталог", cat_h2: "Что берут чаще всего",
+    cat_p: "Толщины в карточках даны как ориентир для типовых задач. Точный размер подберём под ваше применение.",
+    flt_cat: "Категория", flt_type: "Вид", flt_mode: "Формат",
+    all_cats: "Все категории", all_types: "Все виды", any_mode: "Любой",
+    mode_roll: "Целый рулон", mode_custom: "Под заказ",
+    c_build: "Строительство и ремонт", c_pack: "Упаковка и склад", c_industry: "Производство и металл", c_garden: "Дом и огород", c_wholesale: "Опт и перепродажа",
+    t_sleeve: "Рукав", t_flat: "Полотно", t_bag: "Пакеты", t_print: "С печатью",
+    spec_w: "Ширина", spec_t: "Толщина", request: "Запросить", by_order: "по заказу",
+    empty: "В этой комбинации пока нет позиций. Выберите другой фильтр или опишите задачу в заявке.",
+    mm: "мм", um: "мкм", up_to: "до",
+    calc_label: "Расчёт", calc_h2: "Масса рулона и площадь полотна",
+    calc_p: "Введите размеры, и получите массу рулона. Удобно, чтобы заранее прикинуть перевозку и бюджет.",
+    c_mode: "Что вы указываете", c_mode_s: "Ширина рукава в сложенном виде", c_mode_f: "Ширина полотна после разреза",
+    c_w: "Ширина, мм", c_w_h_s: "Рукав: от 50 до 500 мм.", c_w_h_f: "Полотно: от 100 до 1000 мм.",
+    c_t: "Толщина плёнки, мкм", c_t_h: "До 500 мкм. Минимальную толщину уточняйте.",
+    c_l: "Длина в рулоне, м",
+    r_m: "Масса рулона", r_m1: "Масса 1 погонного метра", r_flat: "Ширина полотна", r_area: "Площадь полотна в рулоне",
+    u_kg: "кг", u_g: "г", u_mm: "мм", u_m2: "м²",
+    c_note: "Расчёт для полиэтилена плотностью около 0,92 г/см³. Фактическая масса может отличаться на несколько процентов.",
+    lim_label: "Возможности", lim_h2: "Что мы делаем и где границы",
+    lim_p: "Лучше узнать об этом до заявки. Если нужного нет в списке, напишите: возможно, найдём решение.",
+    lim_yes: "Делаем", lim_no: "Не делаем",
+    y1: "Рукав шириной до 500 мм в сложенном виде.", y2: "Полотно после разреза рукава шириной до 1000 мм.",
+    y3: "Толщина плёнки до 500 мкм.", y4: "Пакеты со сварным швом и запаянным дном.",
+    y5: "Печать логотипа и рисунка на плёнке и пакетах.", y6: "Намотка на рулоны, длину согласуем.",
+    n1: "Рукав шириной более 500 мм в сложенном виде.", n2: "Полотно шире 1000 мм.", n3: "Плёнка толще 500 мкм.",
+    lim_note: "Размеры пакетов, количество цветов печати и минимальную партию уточняйте при заявке. Макет присылайте в векторе или в высоком качестве.",
+    how_label: "Как мы работаем", how_h2: "От заявки до отгрузки",
+    st1h: "Вы присылаете размеры", st1p: "Ширина, толщина, длина и для чего нужна плёнка. Для пакетов и печати добавьте макет. Если не знаете параметры, опишите задачу.",
+    st2h: "Мы подтверждаем и считаем", st2p: "Сообщаем, возможно ли это на нашем оборудовании, называем цену и срок.",
+    st3h: "Производим и отгружаем", st3p: "Делаем партию, мотаем рулоны, упаковываем и передаём вам. Повтор заказа делаем по тем же параметрам.",
+    ord_label: "Заявка", ord_h2: "Опишите, что нужно",
+    ord_p: "Заполните форму, и мы получим заявку. Ответим с ценой и сроком.",
+    f_name: "Имя", f_phone: "Телефон", f_cat: "Для чего нужна продукция", f_type: "Что нужно", f_mode: "Формат",
+    f_q: "Количество (рулонов, метров или штук)", f_q_ph: "например, 5 рулонов по 100 м",
+    f_w: "Ширина, мм (рукав или полотно)", f_w_ph: "рукав до 500, полотно до 1000",
+    f_t: "Толщина, мкм", f_t_ph: "до 500",
+    f_color: "Цвет плёнки", f_color_ph: "прозрачный, чёрный или другой",
+    f_print: "Печать (для пакетов и плёнки)", f_print_ph: "количество цветов, есть ли макет",
+    f_msg: "Комментарий", f_msg_ph: "Где будете применять, размер пакета, срок",
+    f_submit: "Отправить заявку", f_submit_copy: "Собрать текст заявки", sending: "Отправляем…", sent_ok: "Заявка отправлена. Мы свяжемся с вами в ближайшее время.", sent_fail: "Не удалось отправить. Скопируйте текст ниже и отправьте нам в мессенджер или на почту.", need_phone: "Укажите телефон, чтобы мы могли с вами связаться.", f_copy: "Скопировать текст", copied: "Скопировано.", copy_fb: "Текст выделен: скопируйте вручную.",
+    mode_unknown: "Пока не знаю", other: "Другое",
+    o_title: "Заявка на полиэтиленовую продукцию", o_name: "Имя", o_phone: "Телефон", o_use: "Применение", o_type: "Что нужно", o_mode: "Формат",
+    o_w: "Ширина", o_t: "Толщина", o_q: "Количество", o_color: "Цвет", o_print: "Печать", o_msg: "Комментарий",
+    warn_w: "(внимание: рукав до 500 мм, полотно до 1000 мм)", warn_t: "(внимание: предел 500 мкм)",
+    ct_label: "Контакты", ct_person: "Контактное лицо", ct_phone: "Телефон", ct_mail: "Почта", ct_msg: "Мессенджер", ct_prod: "Производство", ct_addr: "Кривой Рог, Днепропетровская область",
+    foot1: "ПЭ Рукав · производство полиэтиленовой продукции", foot2: "Размеры и сроки подтверждаются при заявке"
+  },
+  en: {
+    brand: "PE·SLEEVE", doc_title: "PE Sleeve Kryvyi Rih",
+    nav_formats: "Formats", nav_catalog: "Catalog", nav_calc: "Weight calculator", nav_limits: "Capabilities", nav_order: "Request",
+    hero_label: "Polyethylene products · Kryvyi Rih, Ukraine",
+    hero_h1: "PE layflat sleeve, film and bags made in our own workshop",
+    hero_lead: "We extrude layflat sleeve in-house, slit it into flat film up to 1000 mm wide, weld bags and print on them. Sold as whole rolls or made to your order.",
+    cta1: "Send a request", cta2: "View catalog",
+    f1b: "up to 500 mm", f1s: "layflat sleeve width, folded",
+    f2b: "up to 1000 mm", f2s: "flat film width after slitting",
+    f3b: "up to 500 µm", f3s: "film thickness",
+    svg_aria: "Diagram: a roll, a folded sleeve up to 500 mm wide and flat film up to 1000 mm wide after slitting",
+    s_roll: "roll, end view", s_sleeve: "folded sleeve", s_flat: "flat film after slitting",
+    s_cut: "slit", s_500: "up to 500 mm", s_1000: "up to 1000 mm", s_thick: "film thickness up to 500 µm",
+    cap: "The sleeve is slit lengthwise and opens into a continuous flat film up to 1000 mm wide.",
+    fmt_label: "Two ways to order", fmt_h2: "A whole roll or a custom item made to order",
+    fmt_p: "Choose what suits your task. If you are not sure, describe what you need and we will suggest a size.",
+    fmt1_l: "Whole roll", fmt1_h: "Standard sizes, supplied on rolls",
+    fmt1_a: "Typical widths and thicknesses, no technical agreement needed.",
+    fmt1_b: "Good for regular purchases and resale.",
+    fmt1_c: "We confirm stock and shipping time when you send a request.",
+    fmt2_l: "Made to order", fmt2_h: "Your parameters: width, thickness, bags, printing",
+    fmt2_a: "Any width and thickness within the limits of our extrusion line.",
+    fmt2_b: "Bags with a welded seam and sealed bottom, logo and artwork printing.",
+    fmt2_c: "Repeat orders are made to the same parameters.",
+    cat_label: "Catalog", cat_h2: "What customers order most",
+    cat_p: "Thicknesses on the cards are a guide for typical uses. We will choose the exact size for your application.",
+    flt_cat: "Category", flt_type: "Type", flt_mode: "Format",
+    all_cats: "All categories", all_types: "All types", any_mode: "Any",
+    mode_roll: "Whole roll", mode_custom: "Made to order",
+    c_build: "Construction and repair", c_pack: "Packaging and storage", c_industry: "Industry and metal", c_garden: "Home and garden", c_wholesale: "Wholesale and resale",
+    t_sleeve: "Sleeve", t_flat: "Flat film", t_bag: "Bags", t_print: "Printed",
+    spec_w: "Width", spec_t: "Thickness", request: "Request", by_order: "to order",
+    empty: "No items match this combination yet. Pick another filter or describe your task in a request.",
+    mm: "mm", um: "µm", up_to: "up to",
+    calc_label: "Calculator", calc_h2: "Roll weight and film area",
+    calc_p: "Enter the dimensions to get the roll weight. Useful for estimating transport and budget in advance.",
+    c_mode: "You are entering", c_mode_s: "Width of the folded sleeve", c_mode_f: "Width of the flat film after slitting",
+    c_w: "Width, mm", c_w_h_s: "Sleeve: 50 to 500 mm.", c_w_h_f: "Flat film: 100 to 1000 mm.",
+    c_t: "Film thickness, µm", c_t_h: "Up to 500 µm. Ask about the minimum thickness.",
+    c_l: "Length on the roll, m",
+    r_m: "Roll weight", r_m1: "Weight per 1 running metre", r_flat: "Flat film width", r_area: "Film area on the roll",
+    u_kg: "kg", u_g: "g", u_mm: "mm", u_m2: "m²",
+    c_note: "Calculated for polyethylene with a density of about 0.92 g/cm³. Actual weight can differ by a few percent.",
+    lim_label: "Capabilities", lim_h2: "What we make and where the limits are",
+    lim_p: "It is better to know this before you send a request. If what you need is not on the list, write to us: we may find a solution.",
+    lim_yes: "We make", lim_no: "We do not make",
+    y1: "Sleeve up to 500 mm wide when folded.", y2: "Flat film up to 1000 mm wide after slitting the sleeve.",
+    y3: "Film thickness up to 500 µm.", y4: "Bags with a welded seam and a sealed bottom.",
+    y5: "Printing of logos and artwork on film and bags.", y6: "Winding onto rolls, length agreed with you.",
+    n1: "Sleeve wider than 500 mm when folded.", n2: "Flat film wider than 1000 mm.", n3: "Film thicker than 500 µm.",
+    lim_note: "Confirm bag sizes, number of print colours and minimum batch when you send a request. Send artwork as a vector file or in high quality.",
+    how_label: "How we work", how_h2: "From request to shipment",
+    st1h: "You send the sizes", st1p: "Width, thickness, length and what the film is for. For bags and printing, add your artwork. If you do not know the parameters, describe the task.",
+    st2h: "We confirm and quote", st2p: "We tell you whether it is possible on our equipment and give a price and lead time.",
+    st3h: "We produce and ship", st3p: "We make the batch, wind the rolls, pack and hand them over. Repeat orders use the same parameters.",
+    ord_label: "Request", ord_h2: "Tell us what you need",
+    ord_p: "Fill in the form and we will receive your request. We will reply with a price and lead time.",
+    f_name: "Name", f_phone: "Phone", f_cat: "What it is for", f_type: "What you need", f_mode: "Format",
+    f_q: "Quantity (rolls, metres or pieces)", f_q_ph: "for example, 5 rolls of 100 m",
+    f_w: "Width, mm (sleeve or flat film)", f_w_ph: "sleeve up to 500, flat film up to 1000",
+    f_t: "Thickness, µm", f_t_ph: "up to 500",
+    f_color: "Film colour", f_color_ph: "clear, black or another",
+    f_print: "Printing (for bags and film)", f_print_ph: "number of colours, whether you have artwork",
+    f_msg: "Comment", f_msg_ph: "Where you will use it, bag size, deadline",
+    f_submit: "Send request", f_submit_copy: "Build request text", sending: "Sending…", sent_ok: "Request sent. We will contact you shortly.", sent_fail: "Could not send. Copy the text below and send it to us by messenger or email.", need_phone: "Enter a phone number so we can contact you.", f_copy: "Copy text", copied: "Copied.", copy_fb: "Text selected: copy it manually.",
+    mode_unknown: "Not sure yet", other: "Other",
+    o_title: "Request for polyethylene products", o_name: "Name", o_phone: "Phone", o_use: "Use", o_type: "Product", o_mode: "Format",
+    o_w: "Width", o_t: "Thickness", o_q: "Quantity", o_color: "Colour", o_print: "Printing", o_msg: "Comment",
+    warn_w: "(note: sleeve up to 500 mm, flat film up to 1000 mm)", warn_t: "(note: limit is 500 µm)",
+    ct_label: "Contacts", ct_person: "Contact person", ct_phone: "Phone", ct_mail: "Email", ct_msg: "Messenger", ct_prod: "Production", ct_addr: "Kryvyi Rih, Dnipropetrovsk Region",
+    foot1: "PE Sleeve · polyethylene products manufacturer", foot2: "Sizes and lead times are confirmed when you send a request"
+  }
+};
+
+var CATS = ["build", "pack", "industry", "garden", "wholesale"];
+var TYPES = ["sleeve", "flat", "bag", "print"];
+
+/* w, t: {r:[от,до]} диапазон, {up:N} «до N», {list:[...]} перечень, null «по заказу». wv, tv: значения для предзаполнения заявки. */
+var ITEMS = [
+  { id: "cover-sleeve", cat: "build", type: "sleeve", mode: "roll", wv: 400, tv: 150, w: { r: [300, 500] }, t: { r: [100, 200] },
+    nm: ["Рукав для укриття матеріалів", "Рукав для укрытия материалов", "Sleeve for covering materials"],
+    ds: ["Захист будматеріалів, меблів і конструкцій від пилу та вологи. Уздовж легко розрізається на полотно.",
+         "Защита стройматериалов, мебели и конструкций от пыли и влаги. Вдоль легко разрезается на полотно.",
+         "Protects building materials, furniture and structures from dust and moisture. Easy to slit lengthwise into flat film."] },
+  { id: "cover-flat", cat: "build", type: "flat", mode: "roll", wv: 1000, tv: 150, w: { up: 1000 }, t: { r: [100, 200] },
+    nm: ["Полотно для укриття та захисту підлоги", "Полотно для укрытия и защиты пола", "Flat film for covering and floor protection"],
+    ds: ["Захист підлоги, вікон і меблів під час ремонту. Суцільне полотно шириною до 1000 мм.",
+         "Защита пола, окон и мебели при ремонте. Сплошное полотно шириной до 1000 мм.",
+         "Protects floors, windows and furniture during renovation. Continuous film up to 1000 mm wide."] },
+  { id: "pipe-sleeve", cat: "build", type: "sleeve", mode: "custom", wv: 300, tv: 300, w: { r: [100, 500] }, t: { r: [250, 500] },
+    nm: ["Посилений рукав для захисту труб і кабелю", "Усиленный рукав для защиты труб и кабеля", "Heavy-duty sleeve for pipe and cable protection"],
+    ds: ["Щільна стінка для траншей і прокладок. Товщину підбираємо під умови укладання.",
+         "Плотная стенка для траншей и прокладок. Толщину подбираем под условия укладки.",
+         "Thick wall for trenches and runs. We choose the thickness to match installation conditions."] },
+  { id: "pack-sleeve", cat: "pack", type: "sleeve", mode: "roll", wv: 300, tv: 80, w: { r: [100, 500] }, t: { r: [60, 120] },
+    nm: ["Рукав для пакування довгомірів", "Рукав для упаковки длинномеров", "Sleeve for packing long items"],
+    ds: ["Труби, профіль, рейка, пиломатеріали. Відрізаєте потрібну довжину і стягуєте кінці стрічкою.",
+         "Трубы, профиль, рейка, пиломатериалы. Отрезаете нужную длину и стягиваете концы лентой.",
+         "Pipes, profiles, battens, timber. Cut the length you need and tie the ends with tape."] },
+  { id: "bags", cat: "pack", type: "bag", mode: "custom", wv: 300, tv: 60, w: { up: 500 }, t: null,
+    nm: ["Пакети зі швом і запаяним дном", "Пакеты со швом и запаянным дном", "Bags with a welded seam and sealed bottom"],
+    ds: ["Фасування, склад, транспортування. Розмір, товщину і кількість узгоджуємо під ваш товар.",
+         "Фасовка, склад, транспортировка. Размер, толщину и количество согласуем под ваш товар.",
+         "Packing, storage, shipping. We agree the size, thickness and quantity to fit your goods."] },
+  { id: "bags-print", cat: "pack", type: "print", mode: "custom", wv: 300, tv: 60, w: null, t: null,
+    nm: ["Пакети та плівка з логотипом", "Пакеты и плёнка с логотипом", "Bags and film with your logo"],
+    ds: ["Друк логотипа або малюнка на пакетах і плівці. Кількість кольорів і макет узгоджуємо перед партією.",
+         "Печать логотипа или рисунка на пакетах и плёнке. Количество цветов и макет согласуем перед партией.",
+         "Logo or artwork printed on bags and film. We agree the number of colours and the artwork before the batch."] },
+  { id: "metal-sleeve", cat: "industry", type: "sleeve", mode: "roll", wv: 300, tv: 200, w: { r: [200, 500] }, t: { r: [150, 300] },
+    nm: ["Рукав для захисту деталей і прокату", "Рукав для защиты деталей и проката", "Sleeve for protecting parts and rolled metal"],
+    ds: ["Консервація і транспортний захист деталей від вологи та подряпин.",
+         "Консервация и транспортная защита деталей от влаги и царапин.",
+         "Preservation and transport protection of parts against moisture and scratches."] },
+  { id: "heavy-flat", cat: "industry", type: "flat", mode: "custom", wv: 1000, tv: 400, w: { up: 1000 }, t: { r: [300, 500] },
+    nm: ["Щільне полотно для чохлів і прокладок", "Плотное полотно для чехлов и прокладок", "Heavy flat film for covers and liners"],
+    ds: ["Для задач, де звичайна плівка рветься. Працюємо в межах 500 мкм.",
+         "Для задач, где обычная плёнка рвётся. Работаем в пределах 500 мкм.",
+         "For jobs where ordinary film tears. We work up to 500 µm."] },
+  { id: "garden-sleeve", cat: "garden", type: "sleeve", mode: "roll", wv: 500, tv: 60, w: { r: [300, 500] }, t: { r: [50, 100] },
+    nm: ["Рукав для укриття грядок і зберігання", "Рукав для укрытия грядок и хранения", "Sleeve for covering beds and storage"],
+    ds: ["Укриття вузьких грядок і розсади, зберігання інвентарю та сезонних речей.",
+         "Укрытие узких грядок и рассады, хранение инвентаря и сезонных вещей.",
+         "Covers narrow beds and seedlings, stores tools and seasonal items."] },
+  { id: "mulch-flat", cat: "garden", type: "flat", mode: "custom", wv: 1000, tv: 80, w: { up: 1000 }, t: { r: [60, 120] },
+    nm: ["Чорне полотно для мульчування", "Чёрное полотно для мульчирования", "Black flat film for mulching"],
+    ds: ["Стримує ріст бур’янів. Колір і ширину під ваші рядки узгоджуємо перед партією.",
+         "Сдерживает рост сорняков. Цвет и ширину под ваши рядки согласуем перед партией.",
+         "Suppresses weeds. We agree the colour and width for your rows before the batch."] },
+  { id: "wholesale-rolls", cat: "wholesale", type: "sleeve", mode: "roll", wv: 500, tv: 100, w: { list: [300, 400, 500] }, t: { r: [60, 200] },
+    nm: ["Цілі рулони стандартних розмірів", "Целые рулоны стандартных размеров", "Whole rolls in standard sizes"],
+    ds: ["Для магазинів і дилерів, які перепродають рукав. Розміри й обсяги обговорюємо.",
+         "Для магазинов и дилеров, которые перепродают рукав. Размеры и объёмы обсуждаем.",
+         "For shops and dealers who resell sleeve. We discuss sizes and volumes."] },
+  { id: "brand-print", cat: "wholesale", type: "print", mode: "custom", wv: 400, tv: 100, w: null, t: null,
+    nm: ["Партія з друком для брендів", "Партия с печатью для брендов", "Printed batch for brands"],
+    ds: ["Рукав, полотно або пакети з вашим друком. Повторюваний заказ за одними параметрами.",
+         "Рукав, полотно или пакеты с вашей печатью. Повторяющийся заказ по одним параметрам.",
+         "Sleeve, flat film or bags with your print. A repeat order on the same parameters."] }
+];
+
+var lang = "uk";
+var state = { cat: "all", type: "all", mode: "all" };
+
+function tr(k) { return T[lang][k] != null ? T[lang][k] : T.uk[k]; }
+function li() { return LANGS.indexOf(lang); }
+function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+
+/* пиктограммы продукции: показываются, пока нет фото */
+var PICTO = {
+  sleeve: '<svg viewBox="0 0 200 150" aria-hidden="true"><g fill="none" stroke="var(--muted)" stroke-width="1.2"><circle cx="62" cy="75" r="46" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.6"/><circle cx="62" cy="75" r="34"/><circle cx="62" cy="75" r="23"/><circle cx="62" cy="75" r="12" fill="var(--film)" stroke="var(--ink)" stroke-width="1.6"/></g><rect x="124" y="35" width="52" height="80" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.6"/><line x1="124" y1="75" x2="176" y2="75" stroke="var(--muted)" stroke-dasharray="4 3"/></svg>',
+  flat: '<svg viewBox="0 0 200 150" aria-hidden="true"><rect x="24" y="36" width="152" height="78" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.6"/><g stroke="var(--accent)" stroke-width="1.4" fill="var(--accent)"><line x1="24" y1="24" x2="176" y2="24"/><line x1="24" y1="19" x2="24" y2="29"/><line x1="176" y1="19" x2="176" y2="29"/></g><path d="M24 60 Q 62 48 100 60 T 176 60" fill="none" stroke="var(--muted)" stroke-width="1"/><path d="M24 88 Q 62 76 100 88 T 176 88" fill="none" stroke="var(--muted)" stroke-width="1"/></svg>',
+  bag: '<svg viewBox="0 0 200 150" aria-hidden="true"><rect x="62" y="22" width="76" height="106" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.6"/><rect x="62" y="106" width="76" height="22" fill="var(--film)" stroke="var(--ink)" stroke-width="1.6"/><g stroke="var(--accent)" stroke-width="1.4" stroke-dasharray="4 3"><line x1="68" y1="22" x2="68" y2="106"/><line x1="132" y1="22" x2="132" y2="106"/></g><line x1="62" y1="22" x2="138" y2="22" stroke="var(--muted)" stroke-width="1"/></svg>',
+  print: '<svg viewBox="0 0 200 150" aria-hidden="true"><rect x="62" y="22" width="76" height="106" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.6"/><rect x="62" y="106" width="76" height="22" fill="var(--film)" stroke="var(--ink)" stroke-width="1.6"/><circle cx="100" cy="56" r="16" fill="var(--accent)"/><rect x="78" y="82" width="44" height="5" fill="var(--ink)"/><rect x="86" y="92" width="28" height="4" fill="var(--muted)"/></svg>'
+};
+
+function fmtDim(d, unit) {
+  if (!d) return tr("by_order");
+  var u = tr(unit);
+  if (d.r) return d.r[0] + "–" + d.r[1] + " " + u;
+  if (d.up) return tr("up_to") + " " + d.up + " " + u;
+  if (d.list) return d.list.join(" / ") + " " + u;
+  return tr("by_order");
+}
+
+function applyStatic() {
+  document.documentElement.lang = lang;
+  document.title = tr("doc_title");
+  document.getElementById("brand").innerHTML = "";
+  var parts = tr("brand").split("·");
+  document.getElementById("brand").appendChild(document.createTextNode(parts[0]));
+  var sp = el("span", null, "·"); document.getElementById("brand").appendChild(sp);
+  document.getElementById("brand").appendChild(document.createTextNode(parts[1]));
+  document.querySelectorAll("[data-i18n]").forEach(function (n) { n.textContent = tr(n.getAttribute("data-i18n")); });
+  document.querySelectorAll("[data-i18n-ph]").forEach(function (n) { n.setAttribute("placeholder", tr(n.getAttribute("data-i18n-ph"))); });
+  document.querySelectorAll("[data-i18n-aria]").forEach(function (n) { n.setAttribute("aria-label", tr(n.getAttribute("data-i18n-aria"))); });
+  document.getElementById("cPhone").textContent = CONFIG.phone;
+  document.getElementById("cMail").textContent = CONFIG.mail;
+  document.getElementById("cMsg").textContent = CONFIG.messenger;
+  document.getElementById("cPerson").textContent = CONFIG.person[lang];
+  var m = document.getElementById("msgr"); m.innerHTML = "";
+  [["Telegram", "https://t.me/+" + CONFIG.phoneRaw], ["WhatsApp", "https://wa.me/" + CONFIG.phoneRaw], ["Viber", "viber://chat?number=%2B" + CONFIG.phoneRaw]].forEach(function (x) {
+    var a = el("a", null, x[0]); a.href = x[1]; a.target = "_blank"; a.rel = "noopener"; m.appendChild(a);
+  });
+  document.getElementById("fSubmit").textContent = tr(CONFIG.web3formsKey ? "f_submit" : "f_submit_copy");
+}
+
+function renderLang() {
+  var box = document.getElementById("lang");
+  box.innerHTML = "";
+  LANGS.forEach(function (l) {
+    var b = el("button", null, LANG_LABEL[l]);
+    b.type = "button";
+    b.setAttribute("aria-pressed", String(l === lang));
+    b.addEventListener("click", function () { setLang(l); });
+    box.appendChild(b);
+  });
+}
+
+function chipRow(id, labelKey, options, key) {
+  var row = document.getElementById(id);
+  row.innerHTML = "";
+  row.setAttribute("aria-label", tr(labelKey));
+  row.appendChild(el("span", "label gap-label", tr(labelKey)));
+  options.forEach(function (o) {
+    var b = el("button", "chip", o[1]);
+    b.type = "button";
+    b.setAttribute("aria-pressed", String(state[key] === o[0]));
+    b.addEventListener("click", function () { state[key] = o[0]; renderFilters(); renderGrid(); });
+    row.appendChild(b);
+  });
+}
+
+function renderFilters() {
+  chipRow("catFilters", "flt_cat", [["all", tr("all_cats")]].concat(CATS.map(function (c) { return [c, tr("c_" + c)]; })), "cat");
+  chipRow("typeFilters", "flt_type", [["all", tr("all_types")]].concat(TYPES.map(function (x) { return [x, tr("t_" + x)]; })), "type");
+  chipRow("modeFilters", "flt_mode", [["all", tr("any_mode")], ["roll", tr("mode_roll")], ["custom", tr("mode_custom")]], "mode");
+}
+
+function renderGrid() {
+  var g = document.getElementById("grid");
+  g.innerHTML = "";
+  var list = ITEMS.filter(function (i) {
+    return (state.cat === "all" || i.cat === state.cat) && (state.type === "all" || i.type === state.type) && (state.mode === "all" || i.mode === state.mode);
+  });
+  if (!list.length) { g.appendChild(el("p", "empty", tr("empty"))); return; }
+  list.forEach(function (i) {
+    var c = el("article", "card");
+    var ph = el("div", "photo");
+    if (IMAGES[i.id]) {
+      var im = document.createElement("img");
+      im.src = IMAGES[i.id]; im.alt = i.nm[li()]; im.loading = "lazy";
+      ph.appendChild(im);
+    } else {
+      ph.innerHTML = PICTO[i.type];
+    }
+    c.appendChild(ph);
+    var body = el("div", "body");
+    var tags = el("div", "tags");
+    tags.appendChild(el("span", "tag", tr("t_" + i.type)));
+    tags.appendChild(el("span", "tag" + (i.mode === "custom" ? " custom" : ""), tr("mode_" + i.mode)));
+    body.appendChild(tags);
+    body.appendChild(el("h3", null, i.nm[li()]));
+    body.appendChild(el("p", null, i.ds[li()]));
+    var dl = el("dl", "spec");
+    dl.appendChild(el("dt", null, tr("spec_w"))); dl.appendChild(el("dd", null, fmtDim(i.w, "mm")));
+    dl.appendChild(el("dt", null, tr("spec_t"))); dl.appendChild(el("dd", null, fmtDim(i.t, "um")));
+    body.appendChild(dl);
+    var b = el("button", "btn", tr("request"));
+    b.type = "button";
+    b.addEventListener("click", function () { prefill(i); });
+    body.appendChild(b);
+    c.appendChild(body);
+    g.appendChild(c);
+  });
+}
+
+function prefill(i) {
+  document.getElementById("fCat").value = i.cat;
+  document.getElementById("fType").value = i.type;
+  document.getElementById("fMode").value = i.mode;
+  document.getElementById("fW").value = i.wv;
+  document.getElementById("fT").value = i.tv;
+  document.getElementById("fMsg").value = i.nm[li()];
+  document.getElementById("order").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function fillSelect(id, opts) {
+  var s = document.getElementById(id);
+  var keep = s.value;
+  s.innerHTML = "";
+  opts.forEach(function (o) { var n = el("option", null, o[1]); n.value = o[0]; s.appendChild(n); });
+  if (keep) s.value = keep;
+}
+function renderSelects() {
+  fillSelect("fCat", CATS.map(function (c) { return [c, tr("c_" + c)]; }).concat([["other", tr("other")]]));
+  fillSelect("fType", TYPES.map(function (x) { return [x, tr("t_" + x)]; }));
+  fillSelect("fMode", [["roll", tr("mode_roll")], ["custom", tr("mode_custom")], ["unknown", tr("mode_unknown")]]);
+}
+
+/* калькулятор: масса погонного метра = ширина полотна × толщина × плотность */
+function clamp(v, lo, hi) { v = parseFloat(v); if (isNaN(v)) v = lo; return Math.min(hi, Math.max(lo, v)); }
+function nf(n, d) { return n.toLocaleString(LOCALE[lang], { maximumFractionDigits: d, minimumFractionDigits: 0 }); }
+function calcLimits() { return document.getElementById("cMode").value === "flat" ? [100, 1000] : [50, 500]; }
+function calc() {
+  var lim = calcLimits();
+  var flatMode = document.getElementById("cMode").value === "flat";
+  var w = clamp(document.getElementById("cW").value, lim[0], lim[1]);
+  var t = clamp(document.getElementById("cT").value, 30, 500);
+  var l = clamp(document.getElementById("cL").value, 1, 5000);
+  var flatMm = flatMode ? w : w * 2;
+  var perMeterKg = (flatMm / 1000) * (t / 1e6) * 920;
+  var total = perMeterKg * l;
+  document.getElementById("rM").textContent = nf(total, total < 10 ? 2 : 1) + " " + tr("u_kg");
+  document.getElementById("rM1").textContent = nf(perMeterKg * 1000, 1) + " " + tr("u_g");
+  document.getElementById("rFlat").textContent = nf(flatMm, 0) + " " + tr("u_mm");
+  document.getElementById("rArea").textContent = nf((flatMm / 1000) * l, 1) + " " + tr("u_m2");
+  document.getElementById("cWHint").textContent = tr(flatMode ? "c_w_h_f" : "c_w_h_s");
+}
+function applyCalcMode() {
+  var lim = calcLimits();
+  var n = document.getElementById("cW");
+  n.min = lim[0]; n.max = lim[1];
+  n.value = clamp(n.value, lim[0], lim[1]);
+  calc();
+}
+document.getElementById("cMode").addEventListener("change", function () {
+  var n = document.getElementById("cW");
+  n.value = document.getElementById("cMode").value === "flat" ? 1000 : 500;
+  applyCalcMode();
+});
+["cW", "cT", "cL"].forEach(function (id) {
+  var n = document.getElementById(id);
+  n.addEventListener("input", calc);
+  n.addEventListener("change", function () {
+    var lim = id === "cW" ? calcLimits() : (id === "cT" ? [30, 500] : [1, 5000]);
+    n.value = clamp(n.value, lim[0], lim[1]); calc();
+  });
+});
+
+/* форма */
+document.getElementById("orderForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var v = function (id) { return document.getElementById(id).value.trim(); };
+  var sel = function (id) { var s = document.getElementById(id); return s.options[s.selectedIndex].textContent; };
+  var lines = [tr("o_title")];
+  if (v("fName")) lines.push(tr("o_name") + ": " + v("fName"));
+  if (v("fPhone")) lines.push(tr("o_phone") + ": " + v("fPhone"));
+  lines.push(tr("o_use") + ": " + sel("fCat"));
+  lines.push(tr("o_type") + ": " + sel("fType"));
+  lines.push(tr("o_mode") + ": " + sel("fMode"));
+  var w = v("fW"), t = v("fT"), type = document.getElementById("fType").value;
+  var wLimit = type === "sleeve" ? 500 : 1000;
+  if (w) lines.push(tr("o_w") + ": " + w + " " + tr("mm") + (parseFloat(w) > wLimit ? " " + tr("warn_w") : ""));
+  if (t) lines.push(tr("o_t") + ": " + t + " " + tr("um") + (parseFloat(t) > 500 ? " " + tr("warn_t") : ""));
+  if (v("fQ")) lines.push(tr("o_q") + ": " + v("fQ"));
+  if (v("fColor")) lines.push(tr("o_color") + ": " + v("fColor"));
+  if (v("fPrint")) lines.push(tr("o_print") + ": " + v("fPrint"));
+  if (v("fMsg")) lines.push(tr("o_msg") + ": " + v("fMsg"));
+  var text = lines.join("\n");
+  var note = document.getElementById("sendNote");
+  var out = document.getElementById("out");
+  document.getElementById("outText").textContent = text;
+  document.getElementById("copyNote").textContent = "";
+  if (!CONFIG.web3formsKey) { out.hidden = false; note.textContent = ""; return; }
+  if (!v("fPhone")) { note.textContent = tr("need_phone"); document.getElementById("fPhone").focus(); return; }
+  if (document.getElementById("fBot").checked) return;
+  var btn = document.getElementById("fSubmit");
+  btn.disabled = true; note.textContent = tr("sending"); out.hidden = true;
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "Accept": "application/json" },
+    body: JSON.stringify({
+      access_key: CONFIG.web3formsKey,
+      subject: "Нова заявка з сайту ПЕ Рукав: " + sel("fType") + (v("fName") ? ", " + v("fName") : ""),
+      from_name: "Сайт ПЕ Рукав",
+      message: text,
+      "Мова сайту": LANG_LABEL[lang]
+    })
+  }).then(function (r) { return r.json(); }).then(function (d) {
+    if (d && d.success) {
+      note.textContent = tr("sent_ok");
+      document.getElementById("orderForm").querySelectorAll("input[type=text], input[type=tel], input[type=number], textarea").forEach(function (n) { n.value = ""; });
+    } else { throw new Error("fail"); }
+  }).catch(function () {
+    note.textContent = tr("sent_fail"); out.hidden = false;
+  }).then(function () { btn.disabled = false; });
+});
+document.getElementById("copyBtn").addEventListener("click", function () {
+  var text = document.getElementById("outText").textContent;
+  var note = document.getElementById("copyNote");
+  function fallback() {
+    var r = document.createRange();
+    r.selectNodeContents(document.getElementById("outText"));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    note.textContent = tr("copy_fb");
+  }
+  try {
+    navigator.clipboard.writeText(text).then(function () { note.textContent = tr("copied"); }, fallback);
+  } catch (err) { fallback(); }
+});
+
+function setLang(l) {
+  lang = l;
+  try { localStorage.setItem("pe-rukav-lang", l); } catch (e) {}
+  applyStatic(); renderLang(); renderFilters(); renderGrid(); renderSelects(); calc();
+}
+
+(function init() {
+  var saved = null;
+  try { saved = localStorage.getItem("pe-rukav-lang"); } catch (e) {}
+  if (saved && LANGS.indexOf(saved) >= 0) lang = saved;
+  else {
+    var nav = ((navigator.language || "uk") + "").toLowerCase();
+    if (nav.indexOf("ru") === 0) lang = "ru";
+    else if (nav.indexOf("en") === 0) lang = "en";
+    else lang = "uk";
+  }
+  setLang(lang);
+})();
+</script>
+</body>
+</html>
