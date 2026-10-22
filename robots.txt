@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vaaanik.github.io/pe-rukav/sitemap.xml
