@@ -66,7 +66,7 @@ body {
   font: 16px/1.55 var(--font-body);
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
-  padding-block: 0 48px;
+  padding-block: 0 96px;
   margin: 0;
 }
 .wrap { max-width: 1120px; margin: 0 auto; }
@@ -193,8 +193,25 @@ table.guide td:first-child { font-family: var(--font-mono); white-space: nowrap;
 .contacts { display: grid; gap: 14px; align-content: start; }
 .contacts .row { display: grid; gap: 4px; }
 .contacts .row b { font: 500 18px/1.3 var(--font-mono); word-break: break-word; }
+.contacts a.big { font: 500 18px/1.3 var(--font-mono); color: var(--ink); text-decoration: none; border-bottom: 1px dashed var(--line); word-break: break-word; }
+.contacts a.big:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .msgr { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
-.msgr a { font: 500 13px/1 var(--font-body); padding: 9px 12px; border: 1px solid var(--line); border-radius: 6px; text-decoration: none; color: var(--accent); background: var(--bg); }
+.mbtn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 12px 9px 9px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); text-decoration: none; font: 600 14px/1 var(--font-body); }
+.mbtn:hover { border-color: var(--accent); }
+.mbtn .ico { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; flex: none; }
+.mbtn .ico svg { width: 28px; height: 28px; display: block; }
+.mbtn.tg .ico svg { fill: #26A5E4; }
+.mbtn.vb .ico svg { fill: #7360F2; }
+.mbtn.wa .ico svg { fill: #25D366; }
+.mbtn.ph .ico, .mbtn.ml .ico { background: var(--accent); }
+.mbtn.ph .ico svg, .mbtn.ml .ico svg { width: 16px; height: 16px; fill: none; stroke: var(--accent-ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.nav .ctc { padding: 9px 14px; font-size: 14px; color: var(--accent-ink); }
+.fab { position: fixed; right: max(16px, calc(env(safe-area-inset-right, 0px) + 16px)); bottom: calc(env(safe-area-inset-bottom, 0px) + 16px); z-index: 30; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.fab-btn { appearance: none; border: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; padding: 14px 18px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font: 600 15px/1 var(--font-body); box-shadow: 0 6px 20px rgba(10, 40, 55, 0.28); }
+.fab-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.fab-sheet { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; box-shadow: 0 10px 30px rgba(10, 40, 55, 0.22); display: grid; gap: 8px; width: min(300px, calc(100vw - 32px)); }
+.fab-sheet .mbtn { width: 100%; }
+.fab-sheet .who { font-size: 13px; color: var(--muted); padding: 0 2px 4px; }
 .sendbox { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr); gap: 20px; }
 footer { padding-top: 28px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
 
@@ -218,6 +235,7 @@ footer { padding-top: 28px; border-top: 1px solid var(--line); color: var(--mute
       <a href="#guide" data-i18n="nav_guide">Як обрати</a>
       <a href="#faq" data-i18n="nav_faq">Питання</a>
       <a href="#order" data-i18n="nav_order">Заявка</a>
+      <a href="#contacts" class="btn ctc" data-i18n="nav_contacts">Контакти</a>
       <div class="lang" id="lang" role="group" aria-label="Language"><button type="button" aria-pressed="true">UA</button><button type="button" aria-pressed="false">RU</button><button type="button" aria-pressed="false">EN</button></div>
     </nav>
   </header>
@@ -471,17 +489,25 @@ footer { padding-top: 28px; border-top: 1px solid var(--line); color: var(--mute
           <div><button class="btn ghost" type="button" id="copyBtn" data-i18n="f_copy">Скопіювати текст</button> <span class="hint" id="copyNote" role="status"></span></div>
         </div>
       </form>
-      <div class="panel contacts">
+      <div class="panel contacts" id="contacts">
         <p class="label" data-i18n="ct_label">Контакти</p>
         <div class="row"><span class="hint" data-i18n="ct_person">Контактна особа</span><b id="cPerson" style="font-family:var(--font-body);font-weight:600">Іван Малихін</b></div>
-        <div class="row"><span class="hint" data-i18n="ct_phone">Телефон</span><b id="cPhone">+380 95 590 88 08</b></div>
-        <div class="row"><span class="hint" data-i18n="ct_mail">Пошта</span><b id="cMail">v2394454@gmail.com</b></div>
-        <div class="row"><span class="hint" data-i18n="ct_msg">Месенджер</span><b id="cMsg" style="font-family:var(--font-body);font-weight:500;font-size:16px">Telegram · WhatsApp · Viber</b>
-          <div class="msgr" id="msgr"><a href="https://t.me/+380955908808" target="_blank" rel="noopener">Telegram</a><a href="https://wa.me/380955908808" target="_blank" rel="noopener">WhatsApp</a><a href="viber://chat?number=%2B380955908808" target="_blank" rel="noopener">Viber</a></div></div>
+        <div class="row"><span class="hint" data-i18n="ct_phone">Телефон</span><a class="big" id="cPhone" href="tel:+380955908808">+380 95 590 88 08</a></div>
+        <div class="row"><span class="hint" data-i18n="ct_mail">Пошта</span><a class="big" id="cMail" href="mailto:v2394454@gmail.com">v2394454@gmail.com</a></div>
+        <div class="row"><span class="hint" data-i18n="ct_msg">Месенджер</span>
+          <div class="msgr" id="msgr"><a class="mbtn tg" href="https://t.me/+380955908808" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg></span><span>Telegram</span></a><a class="mbtn vb" href="viber://chat?number=%2B380955908808"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.4 0C9.473.028 5.333.344 3.02 2.467 1.302 4.187.696 6.7.633 9.817.57 12.933.488 18.776 6.12 20.36h.003l-.004 2.416s-.037.977.61 1.177c.777.242 1.234-.5 1.98-1.302.407-.44.972-1.084 1.397-1.58 3.85.326 6.812-.416 7.15-.525.776-.252 5.176-.816 5.892-6.657.74-6.02-.36-9.83-2.34-11.546-.596-.55-3.006-2.3-8.375-2.323 0 0-.395-.025-1.037-.017zm.058 1.693c.545-.004.88.017.88.017 4.542.02 6.717 1.388 7.222 1.846 1.675 1.435 2.53 4.868 1.906 9.897v.002c-.604 4.878-4.174 5.184-4.832 5.395-.28.09-2.882.737-6.153.524 0 0-2.436 2.94-3.197 3.704-.12.12-.26.167-.352.144-.13-.033-.166-.188-.165-.414l.02-4.018c-4.762-1.32-4.485-6.292-4.43-8.895.054-2.604.543-4.738 1.996-6.173 1.96-1.773 5.474-2.018 7.11-2.03zm.38 2.602c-.167 0-.303.135-.304.302 0 .167.133.303.3.305 1.624.01 2.946.537 4.028 1.592 1.073 1.046 1.62 2.468 1.633 4.334.002.167.14.3.307.3.166-.002.3-.138.3-.304-.014-1.984-.618-3.596-1.816-4.764-1.19-1.16-2.692-1.753-4.447-1.765zm-3.96.695c-.19-.032-.4.005-.616.117l-.01.002c-.43.247-.816.562-1.146.932-.002.004-.006.004-.008.008-.267.323-.42.638-.46.948-.008.046-.01.093-.007.14 0 .136.022.27.065.4l.013.01c.135.48.473 1.276 1.205 2.604.42.768.903 1.5 1.446 2.186.27.344.56.673.87.984l.132.132c.31.308.64.6.984.87.686.543 1.418 1.027 2.186 1.447 1.328.733 2.126 1.07 2.604 1.206l.01.014c.13.042.265.064.402.063.046.002.092 0 .138-.008.31-.036.627-.19.948-.46.004 0 .003-.002.008-.005.37-.33.683-.72.93-1.148l.003-.01c.225-.432.15-.842-.18-1.12-.004 0-.698-.58-1.037-.83-.36-.255-.73-.492-1.113-.71-.51-.285-1.032-.106-1.248.174l-.447.564c-.23.283-.657.246-.657.246-3.12-.796-3.955-3.955-3.955-3.955s-.037-.426.248-.656l.563-.448c.277-.215.456-.737.17-1.248-.217-.383-.454-.756-.71-1.115-.25-.34-.826-1.033-.83-1.035-.137-.165-.31-.265-.502-.297zm4.49.88c-.158.002-.29.124-.3.282-.01.167.115.312.282.324 1.16.085 2.017.466 2.645 1.15.63.688.93 1.524.906 2.57-.002.168.13.306.3.31.166.003.305-.13.31-.297.025-1.175-.334-2.193-1.067-2.994-.74-.81-1.777-1.253-3.05-1.346h-.024zm.463 1.63c-.16.002-.29.127-.3.287-.008.167.12.31.288.32.523.028.875.175 1.113.422.24.245.388.62.416 1.164.01.167.15.295.318.287.167-.008.295-.15.287-.317-.03-.644-.215-1.178-.58-1.557-.367-.378-.893-.574-1.52-.607h-.018z"></path></svg></span><span>Viber</span></a><a class="mbtn wa" href="https://wa.me/380955908808" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg></span><span>WhatsApp</span></a></div></div>
         <div class="row"><span class="hint" data-i18n="ct_prod">Виробництво</span><b style="font-family:var(--font-body);font-weight:500;font-size:16px" data-i18n="ct_addr">Кривий Ріг, Дніпропетровська область</b></div>
       </div>
     </div>
   </section>
+
+  <div class="fab" id="fab">
+    <div class="fab-sheet" id="fabSheet" hidden=""><div class="who">Іван Малихін</div><a class="mbtn ph" href="tel:+380955908808"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></span><span>+380 95 590 88 08</span></a><a class="mbtn tg" href="https://t.me/+380955908808" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg></span><span>Telegram</span></a><a class="mbtn vb" href="viber://chat?number=%2B380955908808"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.4 0C9.473.028 5.333.344 3.02 2.467 1.302 4.187.696 6.7.633 9.817.57 12.933.488 18.776 6.12 20.36h.003l-.004 2.416s-.037.977.61 1.177c.777.242 1.234-.5 1.98-1.302.407-.44.972-1.084 1.397-1.58 3.85.326 6.812-.416 7.15-.525.776-.252 5.176-.816 5.892-6.657.74-6.02-.36-9.83-2.34-11.546-.596-.55-3.006-2.3-8.375-2.323 0 0-.395-.025-1.037-.017zm.058 1.693c.545-.004.88.017.88.017 4.542.02 6.717 1.388 7.222 1.846 1.675 1.435 2.53 4.868 1.906 9.897v.002c-.604 4.878-4.174 5.184-4.832 5.395-.28.09-2.882.737-6.153.524 0 0-2.436 2.94-3.197 3.704-.12.12-.26.167-.352.144-.13-.033-.166-.188-.165-.414l.02-4.018c-4.762-1.32-4.485-6.292-4.43-8.895.054-2.604.543-4.738 1.996-6.173 1.96-1.773 5.474-2.018 7.11-2.03zm.38 2.602c-.167 0-.303.135-.304.302 0 .167.133.303.3.305 1.624.01 2.946.537 4.028 1.592 1.073 1.046 1.62 2.468 1.633 4.334.002.167.14.3.307.3.166-.002.3-.138.3-.304-.014-1.984-.618-3.596-1.816-4.764-1.19-1.16-2.692-1.753-4.447-1.765zm-3.96.695c-.19-.032-.4.005-.616.117l-.01.002c-.43.247-.816.562-1.146.932-.002.004-.006.004-.008.008-.267.323-.42.638-.46.948-.008.046-.01.093-.007.14 0 .136.022.27.065.4l.013.01c.135.48.473 1.276 1.205 2.604.42.768.903 1.5 1.446 2.186.27.344.56.673.87.984l.132.132c.31.308.64.6.984.87.686.543 1.418 1.027 2.186 1.447 1.328.733 2.126 1.07 2.604 1.206l.01.014c.13.042.265.064.402.063.046.002.092 0 .138-.008.31-.036.627-.19.948-.46.004 0 .003-.002.008-.005.37-.33.683-.72.93-1.148l.003-.01c.225-.432.15-.842-.18-1.12-.004 0-.698-.58-1.037-.83-.36-.255-.73-.492-1.113-.71-.51-.285-1.032-.106-1.248.174l-.447.564c-.23.283-.657.246-.657.246-3.12-.796-3.955-3.955-3.955-3.955s-.037-.426.248-.656l.563-.448c.277-.215.456-.737.17-1.248-.217-.383-.454-.756-.71-1.115-.25-.34-.826-1.033-.83-1.035-.137-.165-.31-.265-.502-.297zm4.49.88c-.158.002-.29.124-.3.282-.01.167.115.312.282.324 1.16.085 2.017.466 2.645 1.15.63.688.93 1.524.906 2.57-.002.168.13.306.3.31.166.003.305-.13.31-.297.025-1.175-.334-2.193-1.067-2.994-.74-.81-1.777-1.253-3.05-1.346h-.024zm.463 1.63c-.16.002-.29.127-.3.287-.008.167.12.31.288.32.523.028.875.175 1.113.422.24.245.388.62.416 1.164.01.167.15.295.318.287.167-.008.295-.15.287-.317-.03-.644-.215-1.178-.58-1.557-.367-.378-.893-.574-1.52-.607h-.018z"></path></svg></span><span>Viber</span></a><a class="mbtn wa" href="https://wa.me/380955908808" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg></span><span>WhatsApp</span></a><a class="mbtn ml" href="mailto:v2394454@gmail.com"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></span><span>v2394454@gmail.com</span></a></div>
+    <button class="fab-btn" type="button" id="fabBtn" aria-expanded="false" aria-controls="fabSheet">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
+      <span data-i18n="nav_contacts">Контакти</span>
+    </button>
+  </div>
 
   <footer>
     <span data-i18n="foot1">ПЕ Рукав · виробництво поліетиленової продукції</span>
@@ -496,7 +522,7 @@ var CONFIG = {
   phone: "+380 95 590 88 08",
   phoneRaw: "380955908808",
   mail: "v2394454@gmail.com",
-  messenger: "Telegram · WhatsApp · Viber",
+  messenger: "Telegram · Viber · WhatsApp",
   /* Ключ Web3Forms (web3forms.com): заявки приходят на почту, к которой он привязан. Пусто = только копирование текста. */
   web3formsKey: "2c3a848c-1485-4cf0-b0de-20db3622126c"
 };
@@ -523,7 +549,7 @@ var LOCALE = { uk: "uk-UA", ru: "ru-RU", en: "en-US" };
 var T = {
   uk: {
     brand: "ПЕ·РУКАВ", doc_title: "ПЕ Рукав Кривий Ріг", nav_guide: "Як обрати", nav_faq: "Питання", g_label: "Довідка", g_h2: "Як обрати товщину плівки", g_p: "Орієнтир для типових задач. Якщо ваша задача інша, опишіть її в заявці, і ми порадимо товщину.", g_th1: "Товщина", g_th2: "Для чого підходить", g_th3: "Що врахувати", faq_label: "Питання та відповіді", faq_h2: "Що зазвичай питають перед замовленням", 
-    nav_formats: "Формати", nav_catalog: "Каталог", nav_calc: "Розрахунок маси", nav_limits: "Можливості", nav_order: "Заявка",
+    nav_formats: "Формати", nav_catalog: "Каталог", nav_calc: "Розрахунок маси", nav_contacts: "Контакти", call: "Подзвонити", write_mail: "Написати на пошту", close: "Закрити", nav_limits: "Можливості", nav_order: "Заявка",
     hero_label: "Поліетиленова продукція · Кривий Ріг",
     hero_h1: "Поліетиленовий рукав, плівка і пакети від виробника в Кривому Розі",
     hero_lead: "Виготовляємо рукав на власній екструзії, розрізаємо його на полотно до 1000 мм, зварюємо пакети та наносимо друк. Продаємо цілими рулонами або робимо під ваше замовлення.",
@@ -595,7 +621,7 @@ var T = {
   },
   ru: {
     brand: "ПЭ·РУКАВ", doc_title: "ПЭ Рукав Кривой Рог", nav_guide: "Как выбрать", nav_faq: "Вопросы", g_label: "Справка", g_h2: "Как выбрать толщину плёнки", g_p: "Ориентир для типовых задач. Если ваша задача другая, опишите её в заявке, и мы подскажем толщину.", g_th1: "Толщина", g_th2: "Для чего подходит", g_th3: "Что учесть", faq_label: "Вопросы и ответы", faq_h2: "Что обычно спрашивают перед заказом", 
-    nav_formats: "Форматы", nav_catalog: "Каталог", nav_calc: "Расчёт массы", nav_limits: "Возможности", nav_order: "Заявка",
+    nav_formats: "Форматы", nav_catalog: "Каталог", nav_calc: "Расчёт массы", nav_contacts: "Контакты", call: "Позвонить", write_mail: "Написать на почту", close: "Закрыть", nav_limits: "Возможности", nav_order: "Заявка",
     hero_label: "Полиэтиленовая продукция · Кривой Рог",
     hero_h1: "Полиэтиленовый рукав, плёнка и пакеты от производителя в Кривом Роге",
     hero_lead: "Производим рукав на собственной экструзии, разрезаем его на полотно до 1000 мм, свариваем пакеты и наносим печать. Продаём целыми рулонами или делаем под ваш заказ.",
@@ -667,7 +693,7 @@ var T = {
   },
   en: {
     brand: "PE·SLEEVE", doc_title: "PE Sleeve Kryvyi Rih", nav_guide: "Choosing", nav_faq: "FAQ", g_label: "Guide", g_h2: "How to choose film thickness", g_p: "A guide for typical uses. If your task is different, describe it in a request and we will suggest a thickness.", g_th1: "Thickness", g_th2: "Good for", g_th3: "Keep in mind", faq_label: "Questions and answers", faq_h2: "What people usually ask before ordering", 
-    nav_formats: "Formats", nav_catalog: "Catalog", nav_calc: "Weight calculator", nav_limits: "Capabilities", nav_order: "Request",
+    nav_formats: "Formats", nav_catalog: "Catalog", nav_calc: "Weight calculator", nav_contacts: "Contacts", call: "Call", write_mail: "Send an email", close: "Close", nav_limits: "Capabilities", nav_order: "Request",
     hero_label: "Polyethylene products · Kryvyi Rih, Ukraine",
     hero_h1: "PE layflat tubing, film and bags from a manufacturer in Kryvyi Rih, Ukraine",
     hero_lead: "We extrude polyethylene layflat tubing (sleeve) in-house, slit it into flat film up to 1000 mm wide, weld bags and print on them. Sold as whole rolls or made to your order.",
@@ -885,14 +911,55 @@ function applyStatic() {
   document.querySelectorAll("[data-i18n-aria]").forEach(function (n) { n.setAttribute("aria-label", tr(n.getAttribute("data-i18n-aria"))); });
   document.getElementById("cPhone").textContent = CONFIG.phone;
   document.getElementById("cMail").textContent = CONFIG.mail;
-  document.getElementById("cMsg").textContent = CONFIG.messenger;
   document.getElementById("cPerson").textContent = CONFIG.person[lang];
+  var cp = document.getElementById("cPhone"); cp.href = "tel:+" + CONFIG.phoneRaw;
+  var cm = document.getElementById("cMail"); cm.href = "mailto:" + CONFIG.mail;
   var m = document.getElementById("msgr"); m.innerHTML = "";
-  [["Telegram", "https://t.me/+" + CONFIG.phoneRaw], ["WhatsApp", "https://wa.me/" + CONFIG.phoneRaw], ["Viber", "viber://chat?number=%2B" + CONFIG.phoneRaw]].forEach(function (x) {
-    var a = el("a", null, x[0]); a.href = x[1]; a.target = "_blank"; a.rel = "noopener"; m.appendChild(a);
-  });
+  messengerLinks().forEach(function (a) { m.appendChild(a); });
+  renderFab();
   document.getElementById("fSubmit").textContent = tr(CONFIG.web3formsKey ? "f_submit" : "f_submit_copy");
 }
+
+var ICONS = {
+  tg: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>',
+  vb: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.4 0C9.473.028 5.333.344 3.02 2.467 1.302 4.187.696 6.7.633 9.817.57 12.933.488 18.776 6.12 20.36h.003l-.004 2.416s-.037.977.61 1.177c.777.242 1.234-.5 1.98-1.302.407-.44.972-1.084 1.397-1.58 3.85.326 6.812-.416 7.15-.525.776-.252 5.176-.816 5.892-6.657.74-6.02-.36-9.83-2.34-11.546-.596-.55-3.006-2.3-8.375-2.323 0 0-.395-.025-1.037-.017zm.058 1.693c.545-.004.88.017.88.017 4.542.02 6.717 1.388 7.222 1.846 1.675 1.435 2.53 4.868 1.906 9.897v.002c-.604 4.878-4.174 5.184-4.832 5.395-.28.09-2.882.737-6.153.524 0 0-2.436 2.94-3.197 3.704-.12.12-.26.167-.352.144-.13-.033-.166-.188-.165-.414l.02-4.018c-4.762-1.32-4.485-6.292-4.43-8.895.054-2.604.543-4.738 1.996-6.173 1.96-1.773 5.474-2.018 7.11-2.03zm.38 2.602c-.167 0-.303.135-.304.302 0 .167.133.303.3.305 1.624.01 2.946.537 4.028 1.592 1.073 1.046 1.62 2.468 1.633 4.334.002.167.14.3.307.3.166-.002.3-.138.3-.304-.014-1.984-.618-3.596-1.816-4.764-1.19-1.16-2.692-1.753-4.447-1.765zm-3.96.695c-.19-.032-.4.005-.616.117l-.01.002c-.43.247-.816.562-1.146.932-.002.004-.006.004-.008.008-.267.323-.42.638-.46.948-.008.046-.01.093-.007.14 0 .136.022.27.065.4l.013.01c.135.48.473 1.276 1.205 2.604.42.768.903 1.5 1.446 2.186.27.344.56.673.87.984l.132.132c.31.308.64.6.984.87.686.543 1.418 1.027 2.186 1.447 1.328.733 2.126 1.07 2.604 1.206l.01.014c.13.042.265.064.402.063.046.002.092 0 .138-.008.31-.036.627-.19.948-.46.004 0 .003-.002.008-.005.37-.33.683-.72.93-1.148l.003-.01c.225-.432.15-.842-.18-1.12-.004 0-.698-.58-1.037-.83-.36-.255-.73-.492-1.113-.71-.51-.285-1.032-.106-1.248.174l-.447.564c-.23.283-.657.246-.657.246-3.12-.796-3.955-3.955-3.955-3.955s-.037-.426.248-.656l.563-.448c.277-.215.456-.737.17-1.248-.217-.383-.454-.756-.71-1.115-.25-.34-.826-1.033-.83-1.035-.137-.165-.31-.265-.502-.297zm4.49.88c-.158.002-.29.124-.3.282-.01.167.115.312.282.324 1.16.085 2.017.466 2.645 1.15.63.688.93 1.524.906 2.57-.002.168.13.306.3.31.166.003.305-.13.31-.297.025-1.175-.334-2.193-1.067-2.994-.74-.81-1.777-1.253-3.05-1.346h-.024zm.463 1.63c-.16.002-.29.127-.3.287-.008.167.12.31.288.32.523.028.875.175 1.113.422.24.245.388.62.416 1.164.01.167.15.295.318.287.167-.008.295-.15.287-.317-.03-.644-.215-1.178-.58-1.557-.367-.378-.893-.574-1.52-.607h-.018z"/></svg>',
+  wa: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>',
+  ph: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>',
+  ml: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>'
+};
+function mbtn(cls, label, href, ext) {
+  var a = el("a", "mbtn " + cls); a.href = href;
+  if (ext) { a.target = "_blank"; a.rel = "noopener"; }
+  var i = el("span", "ico"); i.innerHTML = ICONS[cls]; a.appendChild(i);
+  a.appendChild(el("span", null, label));
+  return a;
+}
+function messengerLinks() {
+  return [
+    mbtn("tg", "Telegram", "https://t.me/+" + CONFIG.phoneRaw, true),
+    mbtn("vb", "Viber", "viber://chat?number=%2B" + CONFIG.phoneRaw, false),
+    mbtn("wa", "WhatsApp", "https://wa.me/" + CONFIG.phoneRaw, true)
+  ];
+}
+function renderFab() {
+  var sh = document.getElementById("fabSheet"); sh.innerHTML = "";
+  sh.appendChild(el("div", "who", CONFIG.person[lang]));
+  sh.appendChild(mbtn("ph", CONFIG.phone, "tel:+" + CONFIG.phoneRaw, false));
+  messengerLinks().forEach(function (a) { sh.appendChild(a); });
+  sh.appendChild(mbtn("ml", CONFIG.mail, "mailto:" + CONFIG.mail, false));
+}
+document.getElementById("fabBtn").addEventListener("click", function () {
+  var sh = document.getElementById("fabSheet");
+  sh.hidden = !sh.hidden;
+  this.setAttribute("aria-expanded", String(!sh.hidden));
+});
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") { document.getElementById("fabSheet").hidden = true; document.getElementById("fabBtn").setAttribute("aria-expanded", "false"); }
+});
+document.addEventListener("click", function (e) {
+  var f = document.getElementById("fab");
+  if (!f.contains(e.target)) { document.getElementById("fabSheet").hidden = true; document.getElementById("fabBtn").setAttribute("aria-expanded", "false"); }
+});
 
 function renderLang() {
   var box = document.getElementById("lang");
